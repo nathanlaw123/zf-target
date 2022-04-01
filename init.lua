@@ -75,7 +75,7 @@ if not Config.Standalone then
     JobCheck = function(job)
         if type(job) == 'table' then
             job = job[ESX.PlayerData.job.name]
-            if job and ESX.PlayerData.job.grade.level >= job then
+            if job and ESX.PlayerData.job.grade >= job then
                 return true
             end
         elseif job == 'all' or job == ESX.PlayerData.job.name then
